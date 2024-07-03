@@ -1,8 +1,8 @@
-ML Clustering Service
+**Service 1.3 BuildOn**
 
 Questo progetto è un servizio di clustering di machine learning basato su Flask. Fornisce API per preprocessare i dati e eseguire clustering sui dati preprocessati.
 
-Struttura del Progetto
+**Struttura del Progetto**
 
 La struttura del progetto è organizzata come segue:
 ```
@@ -47,10 +47,13 @@ service1.3/
 ├── run.py
 ├── setup.py
 ├── start.sh
+├── Dockerfile
+├── docker-compose.yml
+
 ```
 
 
-Descrizione delle directory e dei file
+**Descrizione delle directory e dei file**
 
 - `app/`: Contiene il codice principale dell'applicazione Flask.
   - `__init__.py`: Inizializza l'app Flask e carica la configurazione.
@@ -91,8 +94,10 @@ Descrizione delle directory e dei file
 - `run.py`: Script per eseguire l'app Flask.
 - `setup.py`: Script di setup per il progetto.
 - `start.sh`: Script di avvio per configurare l'ambiente e avviare l'applicazione.
+- `Dockerfile`: Definizione dell'immagine Docker per il progetto.
+- `docker-compose.yml`: Definizione dei servizi Docker per il progetto.
 
-Configurazione dell'Ambiente
+**Configurazione dell'Ambiente**
 
 Prerequisiti
 
@@ -101,17 +106,17 @@ Assicurati di avere Python 3.6+ e pip installati.
 Creazione di un Ambiente Virtuale
 
 Crea e attiva un ambiente virtuale:
-
+```
 python3 -m venv venv
 source venv/bin/activate  # Su Windows: venv\Scripts\activate
-
+```
 Installazione delle Dipendenze
 
 Installa le dipendenze utilizzando pip e il file setup.py:
-
+```
 pip install .
-
-Configurazione delle Variabili d'Ambiente
+```
+**Configurazione delle Variabili d'Ambiente**
 
 Crea un file .env nella directory principale del progetto e aggiungi le seguenti variabili d'ambiente:
 
@@ -121,7 +126,7 @@ FLASK_ENV=development
 PYTHONPATH=/path/to/your/project/service1.3
 DATABASE_URL=sqlite:///app.db
 ```
-Esecuzione dell'Applicazione
+**Esecuzione dell'Applicazione**
 
 Avvia l'applicazione Flask:
 ```
@@ -129,7 +134,35 @@ python run.py
 ```
 L'applicazione sarà disponibile su http://127.0.0.1:5000/.
 
-API
+**Utilizzo di Docker**
+Costruzione e Avvio dei Contenitori Docker
+Costruisci l'immagine Docker e avvia il contenitore in modalità detached (in background):
+
+```
+docker-compose up -d
+```
+Verifica lo stato dei servizi:
+
+```
+docker-compose ps
+```
+Visualizza i log del contenitore in esecuzione:
+
+```
+docker-compose logs -f
+```
+Accedi alla shell del contenitore (se necessario):
+
+```
+docker-compose exec web /bin/bash
+```
+
+Ferma e rimuovi i contenitori, le reti e i volumi creati da docker-compose:
+
+```
+docker-compose down
+```
+**API**
 
 Documentazione Swagger
 
@@ -153,10 +186,10 @@ oppure
 python3 tests/test_routes.py
 
 ```
-Contribuire
+**Contribuire**
 
 Contribuisci al progetto aprendo issue o inviando pull request. Ogni contributo è benvenuto!
 
-Licenza
+**Licenza**
 
 Questo progetto è rilasciato sotto la licenza MIT. Vedi il file LICENSE per maggiori dettagli.
