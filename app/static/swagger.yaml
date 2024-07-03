@@ -1,0 +1,47 @@
+swagger: "2.0"
+info:
+  description: "This is a sample ML Clustering API."
+  version: "1.0.0"
+  title: "ML Clustering Service API"
+basePath: "/api"
+schemes:
+- "http"
+paths:
+  /preprocess:
+    post:
+      tags:
+      - "Data Preprocessing"
+      summary: "Preprocess input data"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Data to preprocess"
+        required: true
+        schema:
+          type: "object"
+      responses:
+        200:
+          description: "Successful preprocessing"
+  /cluster:
+    post:
+      tags:
+      - "Clustering"
+      summary: "Cluster preprocessed data"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Data to cluster"
+        required: true
+        schema:
+          type: "object"
+      responses:
+        200:
+          description: "Successful clustering"
