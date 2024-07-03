@@ -115,16 +115,18 @@ Configurazione delle Variabili d'Ambiente
 
 Crea un file .env nella directory principale del progetto e aggiungi le seguenti variabili d'ambiente:
 
+```
 SECRET_KEY=mysecretkey
 FLASK_ENV=development
 PYTHONPATH=/path/to/your/project/service1.3
-
+DATABASE_URL=sqlite:///app.db
+```
 Esecuzione dell'Applicazione
 
 Avvia l'applicazione Flask:
-
+```
 python run.py
-
+```
 L'applicazione sarà disponibile su http://127.0.0.1:5000/.
 
 API
@@ -142,9 +144,15 @@ Endpoint
 Testing
 
 Esegui i test utilizzando unittest:
+```
+./start.sh
 
-python -m unittest discover -s tests
+```
+oppure
+```
+python3 tests/test_routes.py
 
+```
 Contribuire
 
 Contribuisci al progetto aprendo issue o inviando pull request. Ogni contributo è benvenuto!
