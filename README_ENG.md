@@ -57,9 +57,7 @@ service1.3/
 
 **Directory and File Descriptio**
     • app/: Contains the main Flask application code.
-        ◦ __init__.py: Initializes the Flask app and loads the configuration.
         ◦ routes/: Contains routing files to define the APIs.
-            ▪ __init__.py: Initializes the routes module.
             ▪ main_routes.py: Defines the main API routes.
             ▪ api_routes.py: Placeholder file for additional APIs.
         ◦ static/: Folder containing Swagger configuration files.
@@ -67,14 +65,11 @@ service1.3/
         ◦ preprocess.py: Contains the logic for data preprocessing.
         ◦ clustering.py: Contains the logic for data clustering.
         ◦ models/: Contains machine learning models.
-            ▪ __init__.py: Initializes the models module.
             ▪ cluster_model.pkl: Pre-trained clustering model.
         ◦ utils/: Contains utility functions.
-            ▪ __init__.py: Initializes the utils module.
             ▪ helpers.py: Contains generic helper functions.
         ◦ logging.py: Logging configuration and initialization.
     • tests/: Contains unit tests for the application.
-        ◦ __init__.py: Initializes the tests module.
         ◦ test_routes.py: Tests for the API routes.
         ◦ test_apis.py: Tests for the main APIs.
     • data/: Contains data used by the application.
