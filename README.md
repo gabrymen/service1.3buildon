@@ -5,7 +5,7 @@ Questo progetto è un servizio di clustering di machine learning basato su Flask
 Struttura del Progetto
 
 La struttura del progetto è organizzata come segue:
-
+```
 service1.3/
 │
 ├── app/
@@ -47,6 +47,8 @@ service1.3/
 ├── run.py
 ├── setup.py
 ├── start.sh
+```
+
 
 Descrizione delle directory e dei file
 
