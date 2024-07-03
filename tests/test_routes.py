@@ -7,7 +7,7 @@ import sys
 load_dotenv()
 
 # Aggiungi il percorso del progetto al PYTHONPATH
-sys.path.insert(0, os.path.abspath(os.getenv('PYTHONPATH')))
+sys.path.insert(0, os.path.abspath(os.getenv('PYTHONPATHREPO')))
 
 from app import create_app
 from config import TestingConfig
