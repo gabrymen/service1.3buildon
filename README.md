@@ -137,7 +137,9 @@ L'applicazione sarà disponibile su http://127.0.0.1:5000/.
 **Utilizzo di Docker**
 Costruzione e Avvio dei Contenitori Docker
 Costruisci l'immagine Docker e avvia il contenitore in modalità detached (in background):
-
+```
+docker-compose build
+```
 ```
 docker-compose up -d
 ```
