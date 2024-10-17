@@ -137,7 +137,9 @@ L'applicazione sarà disponibile su http://127.0.0.1:5000/.
 **Utilizzo di Docker**
 Costruzione e Avvio dei Contenitori Docker
 Costruisci l'immagine Docker e avvia il contenitore in modalità detached (in background):
-
+```
+docker-compose build
+```
 ```
 docker-compose up -d
 ```
@@ -161,6 +163,28 @@ Ferma e rimuovi i contenitori, le reti e i volumi creati da docker-compose:
 
 ```
 docker-compose down
+
+```
+Accedi a Docker Hub
+
+```
+docker login
+
+```
+Costruisci l'immagine Docker (se non lo hai già fatto)
+
+```
+docker-compose build
+```
+Tagga l'immagine Docker
+
+```
+docker tag service1.3_app:latest myusername/myapp:latest
+```
+Pusha l'immagine Docker su Docker Hub
+
+```
+docker push myusername/myapp:latest
 ```
 **API**
 
